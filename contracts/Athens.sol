@@ -149,6 +149,7 @@ contract Athens is Initializable, ERC20Upgradeable, ERC20BurnableUpgradeable, Pa
     }
 
     // The following functions are overrides required by Solidity.
+    //@dev: working out the sequence and repercutions of the sequence of functions.
 
     function _afterTokenTransfer(address from, address to, uint256 amount)
         internal

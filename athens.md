@@ -13,12 +13,9 @@
 * govern and control the DAOs
 
 
-
 ## Governance in AthensDAO
 * what are the governance proposals that the ATH can drive?
-*
-
-
+* Governance templates for fungible tokens? Aragon or colony?
 
 
 ## Possible Relationships
@@ -30,13 +27,19 @@
 
 
 
-
-
-
 ## functions
-
 * Minting
 * Burning
 * Proposal making
 * Voting
 * staking
+
+
+## Strategies for maintenance
+https://docs.openzeppelin.com/contracts/4.x/api/proxy#TransparentUpgradeableProxy
+https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Votes
+https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Permit
+https://docs.openzeppelin.com/contracts/4.x/api/proxy#UUPSUpgradeable
+https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Burnable
+
+https://docs.openzeppelin.com/contracts/4.x/extending-contracts

@@ -1,18 +1,19 @@
 ## Specifications
 
-A stake and funds distribution token.
+* A Stake and Funds distribution token.
+* Other descriptions available?
 
 
 ## Funds Distribution
 
-* [Funds Distribution token standard](https://github.com/ethereum/EIPs/issues/2222)
+* [Funds Distribution token standard - ERC2222](https://github.com/ethereum/EIPs/issues/2222)
 
 
 
 ## Distribution Curve
 
-* avoid plutocracy
-* Mathematics
+* Avoid Plutocracy -
+* Mathematics - diminishing rate of retturn.
 
 
 ## functions
@@ -27,10 +28,11 @@ A stake and funds distribution token.
 * Transferability within the DAO ?
   How does one transfer the token within the DAO?
   Mapping against an NFT identity - KYC?
-* Security features
+
+## Security features
 
 
 ## Optional features
 
 * Internal only Liquidity protocol and pool
-* 
+*

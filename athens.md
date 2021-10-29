@@ -4,8 +4,10 @@
 
 ## ERC20
 * total supply 10 million or less.
-* 50% minted at launch and sotred in treasury.
-* those 5 million that are minted are then distributed to community members
+* 50% minted at launch and stored in treasury.
+
+* out of those 5 million that are minted, 2.5 million are then distributed to community members (decide a distribution mechanism - write an whitelist airdrop function )
+* 2.5 million are then given to investors depending on negotiations to investors.
 
 
 ## goals
@@ -14,7 +16,12 @@
 
 
 ## Governance in AthensDAO
-* what are the governance proposals that the ATH can drive?
+* What are the governance proposals that the ATH can drive?
+    - vote for removing committee members in a general assembly
+    - staked in proposals for investments: a non-member can buy ATH to stake them so that then they can propose investment opportunities to the committee
+    - Explore the potential to lock ATH and provide yield / liquidity.
+
+
 * Governance templates for fungible tokens? Aragon or colony?
 
 

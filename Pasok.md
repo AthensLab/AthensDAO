@@ -13,7 +13,13 @@
 ## Distribution Curve
 
 * Avoid Plutocracy -
-* Mathematics - diminishing rate of retturn.
+* Mathematics - diminishing rate of retturn
+
+## architecture
+* create an abstract contract and an Interface
+* use the appropriate OpenZeppelin Contracts [explain them in the documentaion here]
+* inherit the abstract contract and the interface
+
 
 
 ## functions
@@ -36,3 +42,8 @@
 
 * Internal only Liquidity protocol and pool
 *
+
+
+## sources and references
+
+* [MapleToken](https://github.com/maple-labs/maple-token)

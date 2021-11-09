@@ -34,9 +34,10 @@
 * Transferability within the DAO ?
   How does one transfer the token within the DAO?
   Mapping against an NFT identity - KYC?
+* Internal maths for re-calculating shares, re-balancing tokens vs shares in the funding treasury
 
 ## Security features
-
+* permission / access control mechanism for addresses to own PSK: does this take place manually or automatically?
 
 ## Optional features
 

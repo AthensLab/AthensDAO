@@ -8,5 +8,5 @@ home to the contracts for AthensDAO
 
 
 ## To-Do
-* Aragon Integration tests
+* Aragon Integration tests https://forum.aragon.org 
 * further examples for ERC2222

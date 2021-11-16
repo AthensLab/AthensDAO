@@ -23,7 +23,7 @@
 
 
 ## functions
-
+// separate here in mandatory to be ERC2222 and optional, i.e our contribution.
 * Minting
   When exchanged for funds deposited in the treasury of the DAO
 * Burning
@@ -36,6 +36,13 @@
   Mapping against an NFT identity - KYC?
 * Internal maths for re-calculating shares, re-balancing tokens vs shares in the funding treasury
 
+- Mandatory features
+* Withdraw funds
+* communicate withdrawable funds
+* communicate Funds Distributed
+* communicate Funds Withdrawn
+
+
 ## Security features
 * permission / access control mechanism for addresses to own PSK: does this take place manually or automatically?
 
@@ -46,6 +53,9 @@
 
 
 ## sources and references
+  - s t a n d a r d s
 * [ERC2222 - funds distribution token](https://github.com/ethereum/EIPs/issues/2222)
 * [ERC1411 - Security token](https://github.com/ethereum/EIPs/issues/1411)
+  - c o d e
 * [MapleToken](https://github.com/maple-labs/maple-token)
+* [Flama Staking shares](https://github.com/FlamaToken/Staking/)

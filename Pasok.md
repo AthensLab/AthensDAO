@@ -17,7 +17,7 @@
 
 ## architecture
 * create an abstract contract and an Interface
-* use the appropriate OpenZeppelin Contracts [explain them in the documentaion here]
+* use the appropriate OpenZeppelin Contracts [explain them in the documentation here]
 * inherit the abstract contract and the interface
 
 
@@ -42,7 +42,7 @@
 ## Optional features
 
 * Internal only Liquidity protocol and pool
-*
+
 
 
 ## sources and references

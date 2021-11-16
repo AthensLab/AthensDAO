@@ -39,18 +39,18 @@
 * Stablecoin relationship - onboard #PASOK holders- diagram the process- stablecoin onboarding is a service that is valuable on its own.
 * Stable coin mechanisms in general - FIAT backed stablecoin such as USDC, USDT
 
-
+## Tokenomics
 
 ## functions
 * Minting
-* Burning [tokeneconomics purpose ?]
+* Burning 
 * Proposal making
 * Voting
 * Staking [use tihs instead of burning the tokens]
 
 ## security mechanisms
 
-* review and add.
+* review and add: patterns
 
 
 ## Strategies for maintenance

@@ -46,5 +46,6 @@
 
 
 ## sources and references
-
+* [ERC2222 - funds distribution token](https://github.com/ethereum/EIPs/issues/2222)
+* [ERC1411 - Security token](https://github.com/ethereum/EIPs/issues/1411)
 * [MapleToken](https://github.com/maple-labs/maple-token)

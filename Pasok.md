@@ -55,7 +55,9 @@
 ## sources and references
   - s t a n d a r d s
 * [ERC2222 - funds distribution token](https://github.com/ethereum/EIPs/issues/2222)
+* [ERC2222 - Reference implementation](https://github.com/atpar/funds-distribution-token)
 * [ERC1411 - Security token](https://github.com/ethereum/EIPs/issues/1411)
   - c o d e
 * [MapleToken](https://github.com/maple-labs/maple-token)
+* [MapleToken explanation](https://maplefinance.gitbook.io/maple/protocol/maple-token-holders)
 * [Flama Staking shares](https://github.com/FlamaToken/Staking/)

@@ -2,6 +2,7 @@
 pragma solidity ^0.8.2;
 
 //@dev: this is the 2222 Interface
+//@dev: complete and test with interim contract.
 
 interface IFundsDistributionToken {
 

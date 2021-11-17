@@ -28,17 +28,17 @@ abstract contract ERC2222 is IERC2222, ERC20 {
   uint256 public fundsTokenBalance;
 
 //@dev: constructor
+//@dev: testing regime. 
 
-function _distributeFunds
-function withdrawFunds
-function _prepareWithdraw
-function transfer
-function withdrawableFundsOf
-function withdrawnFundsOf
+function _distributeFunds(){}
+function withdrawFunds(){}
+function _prepareWithdraw(){}
+function transfer(){}
+function withdrawableFundsOf(){}
+function withdrawnFundsOf(){}
+function _mint(){}
+function accumulativeFundsOf(){}
 
-function accumulativeFundsOf
-
-function mint
 
 
 

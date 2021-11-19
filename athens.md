@@ -43,10 +43,10 @@
 
 ## functions
 * Minting
-* Burning 
+* Burning
 * Proposal making
 * Voting
-* Staking [use tihs instead of burning the tokens]
+* Staking [use this instead of burning the tokens]
 
 ## security mechanisms
 

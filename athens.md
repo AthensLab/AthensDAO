@@ -41,12 +41,19 @@
 
 ## Tokenomics
 
-## functions
+## Functions
+### ERC20
 * Minting
 * Burning
+
+### ERC20 Mechanisms
+* Staking [use this instead of burning the tokens]
+
+### ERC2222
+### DAO
 * Proposal making
 * Voting
-* Staking [use this instead of burning the tokens]
+
 
 ## security mechanisms
 
@@ -61,3 +68,53 @@ https://docs.openzeppelin.com/contracts/4.x/api/proxy#UUPSUpgradeable
 https://docs.openzeppelin.com/contracts/4.x/api/token/erc20#ERC20Burnable
 
 https://docs.openzeppelin.com/contracts/4.x/extending-contracts
+
+
+## DAO Services Breakdown
+* Token Services
+  - Token Design
+      * ERC20
+      * ERC2222
+  - Token Distribution
+      * Pre-Mint
+      * Mint as needed
+  - Market Making
+      * Provide liquidity (for yield rewards)
+
+* Governance
+  - Proposal Discussion
+  - Voter Delegation
+  - Voting
+  - Proposal Execution
+
+* Treasury Management
+  - Asset Allocation
+  - Payments
+  - Financial Reporting
+
+* Risk Management
+  - Simulations
+  - Asset Analysis
+
+* Growth
+  - Education
+  - Events
+  - Research
+  - User Onboarding
+
+* Community
+  - Event Sponsorship
+  - Hackathons
+  - Membership
+  - Meme Contests
+  - Communication/ Translations
+
+* Operations
+  - Fullstack Platforms
+  - Project Management
+  - Legal
+
+* Development
+  - Security Audits
+  - Grants
+  - Bounties

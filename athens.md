@@ -45,11 +45,16 @@
 ### ERC20
 * Minting
 * Burning
+* Locking
+
+
 
 ### ERC20 Mechanisms
 * Staking [use this instead of burning the tokens]
 
 ### ERC2222
+
+
 ### DAO
 * Proposal making
 * Voting

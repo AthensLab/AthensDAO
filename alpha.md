@@ -5,5 +5,10 @@
     * Burn
     * Stake or Lock.
 
+    * Pausable
+    * Snapshot
 
+## Multisig frameworks
+    * Gnosis safe
+    * OpenZeppelin Govenor (access control)
     

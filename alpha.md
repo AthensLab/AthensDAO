@@ -1,20 +1,18 @@
 -placeholder token for the multi-sig for the first MVP
 
-## Current contract (openzeppelin):
-* Mint
-* Burn
-* Pausable
-* Ownable
-
-## Functions possibilities/wanted : 
+## Functions: 
     * Mint
     * Burn
-    * Stake or Lock.
-
     * Pausable
+    * Ownable
+
+    * Stake or Lock.
     * Access Control
     * Snapshot
 
 ## Multisig frameworks
     * Gnosis safe
     * OpenZeppelin Govenor 
+
+## 
+

@@ -8,4 +8,12 @@
 * Colony
 
 ## DAO tooling
-* Coordinate
+* Coordinape
+
+
+## Code of Conduct 
+https://berlincodeofconduct.org/
+
+## Insurance
+* insuredao
+* nexusmutual

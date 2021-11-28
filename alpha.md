@@ -14,4 +14,8 @@
     * Gnosis safe
     * OpenZeppelin Govenor
 
-##
+
+## Parameters and variables
+  * simple address <> tokens Mapping
+  * stake 1 ETH to unlock 1 Alpha TOKEN
+  * treasury function

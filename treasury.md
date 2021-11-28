@@ -11,7 +11,7 @@
 * Coordinape
 
 
-## Code of Conduct 
+## Code of Conduct
 https://berlincodeofconduct.org/
 
 ## Insurance

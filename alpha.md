@@ -1,7 +1,7 @@
 -placeholder token for the multi-sig for the first MVP
 
 ## ERC20/ $ALFA Functions:
-### Changing State Data
+#### Changing State Data
     - Minting:
         * Mint
 
@@ -24,7 +24,7 @@
         * Pause
         * Unpause
 
-### Reading-Only State Data
+#### Reading-Only State Data
     - Contract Data:
     
         * Name
@@ -36,7 +36,7 @@
         * Allowance
         * BalanceOf
 
-### Additional Mechanisms and Methods for potential addition
+#### Additional Mechanisms and Methods for potential addition
         * Stake or Lock.
         * Access Control
         * Snapshot

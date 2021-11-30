@@ -1,26 +1,32 @@
 -placeholder token for the multi-sig for the first MVP
 
 ## ERC20/ $ALFA Functions:
-- Changing State Data
-    Minting:
+### Changing State Data
+    - Minting:
         * Mint
-    Burning:
+
+    - Burning:
         * Burn
         * BurnFrom
-    Transferring:
+
+    - Transferring:
         * Transfer
         * Approve
         * TransferFrom
         * DecreaseAllowance
         * IncreaseAllowance
-    Ownable:
+
+    - Ownable:
         * TransferOwnership
         * RenounceOwnership
-    Pausable:
+
+    - Pausable:
         * Pause
         * Unpause
-- Reading-Only State Data
-    Contract Data:
+
+### Reading-Only State Data
+    - Contract Data:
+    
         * Name
         * Symbol
         * TotalSupply
@@ -30,7 +36,7 @@
         * Allowance
         * BalanceOf
 
-- Additional Mechanisms and Methods for potential addition
+### Additional Mechanisms and Methods for potential addition
         * Stake or Lock.
         * Access Control
         * Snapshot

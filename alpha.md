@@ -40,7 +40,7 @@
         * Stake or Lock.
         * Access Control
         * Snapshot
-
+        * Whitelisting addresses
 ## Multisig frameworks
     * Gnosis safe
         - [Zodiac Tooling)[https://gnosisguild.mirror.xyz/OuhG5s2X5uSVBx1EK4tKPhnUc91Wh9YM0fwSnC8UNcg)

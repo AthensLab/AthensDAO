@@ -7,7 +7,21 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
+    
     constructor() ERC20("Alpha", "ALP") {}
+
+/*              Whitelist Mechanism
+    mapping(address => bool) public whitelisted;
+
+    function whitelist(address member) public onlyOwner {
+        whitelisted[member] = true;
+    }
+
+    modifier onlyWhitelisted() {
+        require(whitelisted[msg.sender], 'Account not whitelisted');
+        _;
+    }    
+*/
 
     function pause() public onlyOwner {
         _pause();
@@ -28,4 +42,5 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     {
         super._beforeTokenTransfer(from, to, amount);
     }
+  
 }

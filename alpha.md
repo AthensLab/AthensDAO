@@ -44,6 +44,9 @@
 ## Multisig frameworks
     * Gnosis safe
         - [Zodiac Tooling)[https://gnosisguild.mirror.xyz/OuhG5s2X5uSVBx1EK4tKPhnUc91Wh9YM0fwSnC8UNcg)
+            - Timelimit on unexecuted transactions?
+            - Amount of unexecuted transactions?
+            - Arrange meeting
     * OpenZeppelin Govenor
 
 
@@ -60,6 +63,7 @@
     2) Member burns (transfers) tokens to receive $ATH tokens (when $ATH available)
         or
        AthensDAO Airdrops $ATH tokens to all members as per snapshot?
+    3) Picking a Network for Gnosis, Polygon, xDAI, Arbitrum? 
     
 ## Current Vision - 100 $ETH goal
 ### Stakeholders
@@ -71,10 +75,11 @@
 ### Flow
 1) Non-member goes through interview and KYC process to become an AthensDAOMember.
 2) Member:
-    - Stake $ETH into ALFA contract 
+    - Stake/ Transfer $ETH into ALFA contract.
+        - Member EOA address is whitelisted with total amount of $ETH sent also saved.
     - ALFA contract mints (pre-mint) $ALFA tokens for member to claim
-        - I.E: Stakes 1 $ETH into $ALFA contract to receive 1 $ALFA token. (1 $ETH = 1 $ALFA)
-        - I.E: $ALFA Token to be stored by member for future exchange (when DAO launches) (address of member can also be retrieved if token lost)
-3) ALFA Contract stores the donating members' address in contract (for future usage)
+        - I.E: Member stakes 1 $ETH into $ALFA contract to receive 1 $ALFA token. (1 $ETH = 1 $ALFA)
+        - I.E: $ALFA Token to be stored in member's EOA for future exchange (when DAO launches) (address of member is whitelisted, if token lost)
+3) ALFA Contract stores the donating members' address in contract (whitelisting mechanism)
 4) Once 100 $ETH cap is reached, (contract takes a snapshot of donor address)
 

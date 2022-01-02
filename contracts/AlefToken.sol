@@ -25,12 +25,20 @@ contract Alef is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable, ERC20Pe
         _snapshot();
     }
 
-    mapping(bool => address[]) holders;
+//@dev: to map holders of the token
+    //mapping(bool => address[]) holders;
 
-    function getHolders() public view returns(address[] memory) {
-        return holders[true];
-    }
-    
+//@dev: to retrive holders of the token
+    //  function getHolders() public view returns(address[] memory) {
+    //    return holders[true];
+    //  }
+
+//@dev: Build a transfer function, that emits the address we send the token to.
+//@dev: capture that address in a Mapping
+
+//@dev: build a function to retrieve those addresses.
+//@dev: perfect "upgrade" - built the Alef conttract such as the owners of the alef token, can call the Upgrade function to burn the ALef and mint the Athens Token.
+
 
     function pause() public onlyOwner {
         _pause();

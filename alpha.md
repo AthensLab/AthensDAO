@@ -45,7 +45,8 @@
 ## Multisig frameworks
     * Gnosis safe
         - [Zodiac Tooling)[https://gnosisguild.mirror.xyz/OuhG5s2X5uSVBx1EK4tKPhnUc91Wh9YM0fwSnC8UNcg)
-    * OpenZeppelin Governor
+    * PrimeDAO
+        - [PrimeDAO](https://medium.com/primedao/introducing-prime-launch-c423e702dda9)
 
 
 ## Parameters and variables

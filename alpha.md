@@ -70,7 +70,7 @@
 - ALFA Contract: $ALFA Token Smart Contract
     - ALFA Contract Owner / MultiSig : Member/s who own the ALFA smart contract
 
-### Flow
+### Flow (review this!)
 1) Non-member goes through interview and KYC process to become an AthensDAOMember.
 2) Member:
     - Stake $ETH into ALFA contract
@@ -79,3 +79,6 @@
         - I.E: $ALFA Token to be stored by member for future exchange (when DAO launches) (address of member can also be retrieved if token lost)
 3) ALFA Contract stores the donating members' address in contract (for future usage)
 4) Once 100 $ETH cap is reached, (contract takes a snapshot of donor address)
+
+## references
+[Whitelist contract](https://github.com/AthensLab/whitelist_contract)

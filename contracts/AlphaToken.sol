@@ -18,6 +18,7 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 
     constructor() ERC20("Alpha", "ALF") {
       _mint(msg.sender, 150 * 10 ** decimals());
+      owner = msg.sender; // setting the owner the contract deployer
     }
 
 
@@ -31,11 +32,17 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     mapping(uint => Holder) public holders;
     uint public nextHolderId;
 
+    mapping(address => bool) whitelistedAddresses;
+
+
     modifier onlyWhitelisted() {
         require(whitelisted[msg.sender], 'Account not whitelisted');
         _;
     }
-*/
+
+    function addUser(address _addressToWhitelist) public onlyOwner {
+        whitelistedAddresses[_addressToWhitelist] = true;
+    }
 
 
     function pause() public onlyOwner {

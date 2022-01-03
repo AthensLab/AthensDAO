@@ -14,13 +14,11 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 
-<<<<<<< HEAD:contracts/AlphaToken.sol
 contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 
-    constructor() ERC20("Alpha", "ALP") {}
-=======
-contract ALPHToken is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable {
->>>>>>> 27510479f5402bec7548ac305710e813bb3df256:contracts/AplhaToken.sol
+    constructor() ERC20("Alpha", "ALF") {
+      _mint(msg.sender, 150 * 10 ** decimals());
+    }
 
 
 //@dev Struct created when $ALPH is transferred to an AthensDAO member address
@@ -33,40 +31,12 @@ contract ALPHToken is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable {
     mapping(uint => Holder) public holders;
     uint public nextHolderId;
 
-<<<<<<< HEAD:contracts/AlphaToken.sol
     modifier onlyWhitelisted() {
         require(whitelisted[msg.sender], 'Account not whitelisted');
         _;
     }
 */
 
-/*
-//@dev: mapping to show the addresses who hold the tokens//@dev: to map holders of the token
-    mapping(bool => address[]) holders;
-
-//@dev: to retrieve holders of the token
-//@dev: we need to change this to include a mapping of addresses to number of tokens.
-
-      function getHolders() public view returns(address[] memory) {
-        return holders[true];
-      }
-
-*/
-=======
-    //@dev Mint a total supply of 150 $ALPH Tokens
-    constructor() ERC20("ALPHToken", "ALPH") {
-        _mint(msg.sender, 150 * 10 ** decimals());
-    }
-
-    //@dev Override decimals from 18 to 0
-    function decimals() public view virtual override returns (uint8) {
-        return 0;
-    }
-
-    function snapshot() public onlyOwner {
-        _snapshot();
-    }
->>>>>>> 27510479f5402bec7548ac305710e813bb3df256:contracts/AplhaToken.sol
 
     function pause() public onlyOwner {
         _pause();
@@ -98,7 +68,7 @@ contract ALPHToken is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable {
         holder.id = nextHolderId;
         holder.to = to;
         holder.amount = amount;
-        
+
         nextHolderId++;
     }
 

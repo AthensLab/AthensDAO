@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
-    
+
     constructor() ERC20("Alpha", "ALP") {}
 
 /*              Whitelist Mechanism
@@ -20,7 +20,20 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     modifier onlyWhitelisted() {
         require(whitelisted[msg.sender], 'Account not whitelisted');
         _;
-    }    
+    }
+*/
+
+/*
+//@dev: mapping to show the addresses who hold the tokens//@dev: to map holders of the token
+    mapping(bool => address[]) holders;
+
+//@dev: to retrieve holders of the token
+//@dev: we need to change this to include a mapping of addresses to number of tokens.
+
+      function getHolders() public view returns(address[] memory) {
+        return holders[true];
+      }
+
 */
 
     function pause() public onlyOwner {
@@ -42,5 +55,5 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     {
         super._beforeTokenTransfer(from, to, amount);
     }
-  
+
 }

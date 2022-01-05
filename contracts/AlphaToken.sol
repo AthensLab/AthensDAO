@@ -19,37 +19,33 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     address public ALLOWER;
 
     constructor() ERC20("Alpha", "ALF") {
-        _mint(msg.sender, 150 * 10 ** decimals());
+        _mint(msg.sender, 150 * 1); //10 ** decimals());
         ALLOWER = msg.sender;
     }
 
-
-//@dev Struct created when $ALPH is transferred to an AthensDAO member address
+//@dev Member struct created when Owner approves address with allowance amount
     struct Member {
         address memberAddress;
         uint amountReceivable;
         bool tokenReceived;
     }
-    //@dev Holders searchable by number in which tokens was transferred
     mapping(address => Member) public members;
 
-
+//@dev Check if address whitelisted or not
     mapping(address => bool) public whitelistedAddresses;
-    // mapping(address => mapping (address => uint256)) amountWhitelisted;
-
+    
+//@dev Array to save addresses when approve() called
+    address[] public toReceiveTokens;
 
     modifier onlyWhitelisted() {
         require(whitelistedAddresses[msg.sender], 'Account not whitelistedAddress');
         _;
     }
 
-        /**
-     * @dev See {IERC20-approve}.
-     *
-     * Requirements:
-     *
-     * - `spender` cannot be the zero address.
-     */
+//@dev override approve() from ERC20
+//@dev Owner calls approve() on Address and Amount, which is saved in Members struct
+//@dev Address also whitelisted
+//@dev Address added toReceiveTokens array
     function approve(address spender, uint256 amount) public override onlyOwner returns (bool) {
         _approve(_msgSender(), spender, amount);
         
@@ -62,23 +58,36 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
         member.tokenReceived = false;
 
         whitelistedAddresses[spender] = true;
+
+        toReceiveTokens.push(spender);
         
         return true;
     }
+//@dev View the array of addresses which can claim tokens
+    function viewToReceiveTokens() public view returns(address[] memory) {
+        return toReceiveTokens;
+    }
 
+//@dev Whitelisted member can call tokenClaim to receive 
+//the amount of tokens that was allowed to them by the ALLOWER(owner) for donating ETH
+//@dev 
     function tokenClaim() public returns(bool) {
         require(whitelistedAddresses[msg.sender], "This address is not whitelisted"); //onlyWhitelisted
 
         Member storage member = members[msg.sender];
+
+        require(member.amountReceivable > 0, "Not enough allowance to claim");
+
         member.tokenReceived = true;
 
         uint amountToReceive = member.amountReceivable;
         member.amountReceivable = 0;
         transferFrom(ALLOWER, msg.sender ,amountToReceive);
 
+        // To remove address from toReceiveTokens array
+
         return true;
     }
-
 
     function pause() public onlyOwner {
         _pause();
@@ -95,7 +104,7 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 //@dev: capture that address in a Struct (Mapping)
 
 //@dev: build a function to retrieve those addresses. (Javascript function to iterate through the amount of Token Holders)
-//@dev: perfect "upgrade" - built the Alef conttract such as the owners of the alef token, can call the Upgrade function to burn the ALef and mint the Athens Token.
+//@dev: perfect "upgrade" - built the Alfa conttract such as the owners of the alef token, can call the Upgrade function to burn the ALef and mint the Athens Token.
 
 //@dev Used the token transfer params to create a struct of each Token Transfer from the Owner of the contrac tot a specified member address
     function _beforeTokenTransfer(address from, address to, uint256 amount)

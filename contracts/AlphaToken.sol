@@ -18,30 +18,63 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 
     constructor() ERC20("Alpha", "ALF") {
       _mint(msg.sender, 150 * 10 ** decimals());
-      owner = msg.sender; // setting the owner the contract deployer
+
     }
 
 
 //@dev Struct created when $ALPH is transferred to an AthensDAO member address
-    struct Holder {
-        uint id;
-        address to;
-        uint amount;
+    struct Member {
+        address memberAddress;
+        uint amountReceivable;
+        bool tokenReceived;
     }
     //@dev Holders searchable by number in which tokens was transferred
-    mapping(uint => Holder) public holders;
-    uint public nextHolderId;
+    mapping(address => Member) public members;
 
-    mapping(address => bool) whitelistedAddresses;
+
+    mapping(address => bool) public whitelistedAddresses;
+    // mapping(address => mapping (address => uint256)) amountWhitelisted;
 
 
     modifier onlyWhitelisted() {
-        require(whitelisted[msg.sender], 'Account not whitelisted');
+        require(whitelistedAddresses[msg.sender], 'Account not whitelistedAddress');
         _;
     }
 
-    function addUser(address _addressToWhitelist) public onlyOwner {
-        whitelistedAddresses[_addressToWhitelist] = true;
+        /**
+     * @dev See {IERC20-approve}.
+     *
+     * Requirements:
+     *
+     * - `spender` cannot be the zero address.
+     */
+    function approve(address spender, uint256 amount) public override onlyOwner returns (bool) {
+        _approve(_msgSender(), spender, amount);
+        
+        super.approve(spender, amount);
+
+        Member storage member = members[spender];
+
+        member.memberAddress = spender;
+        member.amountReceivable = amount;
+        member.tokenReceived = false;
+
+        whitelistedAddresses[spender] = true;
+        
+        return true;
+    }
+
+    function tokenClaim() public returns(bool) {
+        require(whitelistedAddresses[msg.sender], "This address is not whitelisted"); //onlyWhitelisted
+        
+        Member storage member = members[msg.sender];
+        member.tokenReceived = true;
+
+        uint amountToReceive = member.amountReceivable;
+        member.amountReceivable = 0;
+        transferFrom(msg.sender, msg.sender ,amountToReceive);
+
+        return true;
     }
 
 
@@ -66,17 +99,10 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
     function _beforeTokenTransfer(address from, address to, uint256 amount)
         internal
         whenNotPaused
-        override(ERC20, ERC20Snapshot)
+        override(ERC20)
     {
         super._beforeTokenTransfer(from, to, amount);
 
-        uint _nextHolderId = nextHolderId;
-        Holder storage holder = holders[_nextHolderId];
-        holder.id = nextHolderId;
-        holder.to = to;
-        holder.amount = amount;
-
-        nextHolderId++;
     }
 
 }

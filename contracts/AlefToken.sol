@@ -25,6 +25,13 @@ contract Alef is ERC20, ERC20Burnable, ERC20Snapshot, Ownable, Pausable, ERC20Pe
         _snapshot();
     }
 
+
+    //@dev: Create a whitelist to whitelist addresses and amounts-
+    //@dev: create an enum to track state for each address: 0-1-2 /whitelist, transfer Alef token, Transfer AThens Token-
+    //@dev: create a function to make the airdrop - transfer of the token to the respective account.
+
+    
+
 //@dev: to map holders of the token
     mapping(bool => address[]) holders;
 

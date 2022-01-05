@@ -16,9 +16,11 @@ import "@openzeppelin/contracts/security/Pausable.sol";
 
 contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 
-    constructor() ERC20("Alpha", "ALF") {
-      _mint(msg.sender, 150 * 10 ** decimals());
+    address public ALLOWER;
 
+    constructor() ERC20("Alpha", "ALF") {
+        _mint(msg.sender, 150 * 10 ** decimals());
+        ALLOWER = msg.sender;
     }
 
 
@@ -66,13 +68,13 @@ contract Alpha is ERC20, ERC20Burnable, Pausable, Ownable {
 
     function tokenClaim() public returns(bool) {
         require(whitelistedAddresses[msg.sender], "This address is not whitelisted"); //onlyWhitelisted
-        
+
         Member storage member = members[msg.sender];
         member.tokenReceived = true;
 
         uint amountToReceive = member.amountReceivable;
         member.amountReceivable = 0;
-        transferFrom(msg.sender, msg.sender ,amountToReceive);
+        transferFrom(ALLOWER, msg.sender ,amountToReceive);
 
         return true;
     }

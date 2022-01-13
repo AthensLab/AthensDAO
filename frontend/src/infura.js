@@ -1,7 +1,7 @@
 // import React, { useState, Component } from "react";
-// import { AlphaABI } from "./contractABI/AlphaABI.js";
+import { AlphaABI } from "./contractABI/AlphaABI.js";
 import { ethers, Contract, Signer } from "ethers";
-// import detectEthereumProvider from '@metamask/detect-provider';
+import detectEthereumProvider from '@metamask/detect-provider';
 
 const provider = new ethers.providers.InfuraProvider("rinkeby")
 

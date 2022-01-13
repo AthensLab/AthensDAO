@@ -13,19 +13,19 @@ function App() {
   const [alpha, setAlpha] = useState(undefined);
 
   useEffect(() => {
-    // console.log('useEffect')
-
+    
     const init = async () => {
       const { signer, alpha } = await getBlockchain();
-      // console.log(alpha);
-
       setSigner(signer);
       setAlpha(alpha);
     };
     init();
+
   }, []);
 
   //////////////functions/////////////
+
+
 
   /////////////////////
 
@@ -38,8 +38,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ALFA Token</h1>
-        <button className="enableEthereumButton">Enable Ethereum</button>
+        <h1>ALPHA Token</h1>
+        <button onClick={ function eth() {window.ethereum.request({ method: 'eth_requestAccounts' }); console.log('MM connected')}} className="enableEthereumButton">Connect MetaMask</button>
       </header>
     </div>
   );

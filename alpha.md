@@ -83,5 +83,6 @@
 ## references
 [Whitelist contract](https://github.com/AthensLab/whitelist_contract)
 
-### Rinkeby contract address
+### Rinkeby contract address (newest first)
+0x4Fe7D522AbE6AC9699401c1C9a1bFDD869b95cdb
 0x54a2Fef8541B730eC8cf38aaF55B78F688016770

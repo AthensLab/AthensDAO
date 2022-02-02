@@ -1,3 +1,47 @@
+## Front matter
+
+## Overview
+  - problem description
+  - summary, stakeholders
+
+## Glossary
+
+## Context and Background
+
+## Goals and Technical Requirements
+  - Aplha raise website.
+  - Alpha contracts
+  - Alpha token Interface
+
+## Proposed solutions
+  - Alpha contract
+  - Alpha token Interface
+
+* Presentation Layer    
+  ## Base Interface
+  * Javascript and choice off your framework, "react.js" for example.
+
+
+  ## functions
+  * Approve for whitelist
+  * mint tokens
+  * claim your aplha token
+  * burning
+
+
+  ## Functions owner
+  * pause
+  * unpause
+
+
+## testing
+
+## deployment
+
+## Stakeholders and Team 
+
+
+
 -placeholder token for the multi-sig for the first MVP
 
 ## ERC20/ $ALFA Functions:

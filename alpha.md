@@ -1,48 +1,57 @@
 ## Front matter
+Alpha Token of athensDAO
 
 ## Overview
   - problem description
   - summary, stakeholders
 
 ## Glossary
+Not used / Need at the moment
+
 
 ## Context and Background
+Aplha is the interim token that the AthensDAO will use as a receipt tpken for donations for the first raise. It is used as -placeholder token for the multi-sig for the first MVP
+
 
 ## Goals and Technical Requirements
-  - Aplha raise website.
-  - Alpha contracts
-  - Alpha token Interface
+  - Aplha raise website ( see https://www.athenslabs.io/dao)
+  - Alpha contracts (see https://github.com/AthensLab/AthensDAO/blob/main/contracts/AlphaToken.sol)
+  - Alpha token Interface (to be built)
 
 ## Proposed solutions
-  - Alpha contract
-  - Alpha token Interface
+  - Alpha contract (build in solidity to run on a layer two- polygon or xDAI)
+  - Alpha token Interface (to be built)
 
 * Presentation Layer    
-  ## Base Interface
-  * Javascript and choice off your framework, "react.js" for example.
+  - Base Interface
+  * Javascript and choice of your framework, "react.js" for example.
+  * to investigate the possibility that we embed the interface on the alpha token website- https://www.athenslabs.io/dao , for example via frames)
 
 
-  ## functions
-  * Approve for whitelist
+## functions
+  * Approve an ETH address for whitelist
   * mint tokens
-  * claim your aplha token
-  * burning
+  * claim your Alpha token
+  * burning of tokens
 
-
-  ## Functions owner
+## Functions owner
   * pause
   * unpause
 
 
 ## testing
+- deploy localy first, then on the sever where athenslabs.io is running
+- connect the test interface with the contract running on a test network.
+
 
 ## deployment
-
-## Stakeholders and Team 
-
+- connect the final deployed solution with the contrsact deployed on polygon or xDAI.
 
 
--placeholder token for the multi-sig for the first MVP
+## Stakeholders and Team
+Not applicable at the moment.
+
+
 
 ## ERC20/ $ALFA Functions:
 #### Changing State Data

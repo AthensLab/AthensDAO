@@ -1,12 +1,13 @@
 ## Specifications
 
 * A Stake and Funds distribution token.
-* Other descriptions available?
+* Other descriptions available: Stake tokens against trasury.
 
 
 ## Funds Distribution
 
 * [Funds Distribution token standard - ERC2222](https://github.com/ethereum/EIPs/issues/2222)
+
 
 
 
@@ -61,3 +62,5 @@
 * [MapleToken](https://github.com/maple-labs/maple-token)
 * [MapleToken explanation](https://maplefinance.gitbook.io/maple/protocol/maple-token-holders)
 * [Flama Staking shares](https://github.com/FlamaToken/Staking/)
+  - o p e n z e p p e l i n
+* Link and explain the contracts to use.
